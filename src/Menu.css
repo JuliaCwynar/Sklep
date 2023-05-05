@@ -1,0 +1,88 @@
+.filter--menu {
+    position: relative;
+    top: 200px;
+    width: 300px;
+    background-color: #fffbf5;
+    text-align: left;
+    border-radius: 3px;
+}
+
+.menu h2 {
+  font-size: 20px;
+}
+
+.company {
+  display: flex;
+  justify-content: left;
+  margin: 0 5px;
+}
+
+.filter, .categories {
+  margin: 20px;
+}
+
+.filter--choices {
+  background-color: rgba(0, 0, 0, 0.053);
+  width: 100%;
+  border-radius: 3px;
+  line-height: 30px;
+}
+
+.dropdown-btn {
+  background-color: rgba(0, 0, 0, 0.053);
+  color: black;
+  width: 100%;
+  border-radius: 3px;
+  margin: 5px 0;
+  padding: 10px;
+  display: flex;
+
+}
+
+
+.dropdown-container {
+  display: grid;
+}
+
+.dropdown-container a {
+  padding: 5px 10px;
+  margin: 5px 0px 5px 15px;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.027);
+  color: black;
+}
+
+.filter-btn {
+  display: none;
+}
+
+.config--bar .search--bar {
+  display: none;
+}
+
+
+@media only screen and (max-width: 480px) {
+
+  .filter--menu {
+    top: 120px;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.filter-btn {
+  display: flex;
+}
+
+.config--bar {
+  width: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.config--bar .search--bar {
+  display: inline;
+  width: 100%;
+}
+}

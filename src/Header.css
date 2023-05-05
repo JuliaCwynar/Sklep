@@ -1,0 +1,161 @@
+.navbar {
+    padding: 0 10vw;
+    position: fixed;
+    width: 100%;
+    background-color: white;
+    z-index: 2;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    font-family: 'Helvetica', sans-serif;
+    box-sizing: border-box;
+    display: flex;
+}
+
+.navbar--top h2{
+    padding: 0 10vw 0 10vw;
+}
+
+.navbar--left {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+}
+
+.navbar--left h1 {
+    font-size: 35px;
+    margin: auto;
+}
+
+.navbar--right {
+    margin-left: auto;
+    display: flex;
+}
+
+.navbar ul {
+    margin: auto;
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.navbar ul li {
+    position: relative;
+    width: 70px;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: auto;
+    padding: 5px;
+}
+
+.navbar ul li:hover {
+    background: #e3ca98;
+}
+
+.navbar ul li a {
+    color: #000d2a;
+}
+
+.navbar img {
+    margin: 10px;
+    height: 90px;
+    object-fit: cover;
+}
+
+.navbar--top {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    background-color: #194d6f;
+    color: white;
+    font-size: 10px;
+    justify-content: space-between;
+}
+
+
+.search--bar {
+    width: 80%;
+    margin: auto;
+    justify-content: center;
+    display: flex;
+    height: 30px;
+    
+}
+
+.search--bar input {
+    border: none;
+    padding: 2px;
+    width: 400px;
+    height: 30px;
+    border-radius: 3px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+
+.search--bar input:active {
+    border: none;
+}
+
+@media only screen and (max-width: 1000px) {
+
+    .search--bar {
+        width: 40vw;
+    }
+.navbar {
+    padding: 0px;
+    justify-content: center;
+}
+
+.navbar ul li {
+    padding: 0px;
+    margin: 0px;
+    gap: 0px;
+}
+
+.navbar ul {
+    padding: 0px;
+}
+
+.navbar--right {
+    margin: 0px;
+}
+
+.navbar img {
+    margin: 10px;
+    height: 50px;
+    object-fit: cover;
+
+}
+
+.navbar--top h2{
+    margin: auto;
+    font-size:12px;
+}
+
+
+}
+
+@media only screen and (max-width: 480px) {
+    .navbar {
+        padding: 0;
+        position: fixed;
+        background-color: white;
+        z-index: 2;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        font-family: 'Helvetica', sans-serif;
+        margin: 0px;
+
+    }
+    
+    .navbar--left {
+        display: flex;
+        gap: 0px;
+        margin: 0px;
+    }
+
+    .navbar--right {
+        margin: 0px;
+    }
+    .navbar--right .search--bar {
+        display: none;
+    }
+   
+    
+}
