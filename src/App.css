@@ -10,7 +10,14 @@
   margin: auto;
 }
 
-@media only screen and (max-width: 480px) {
+
+@media only screen and (max-width: 780px) {
+  .main {
+  grid-template-columns: auto auto;
+  }
+}
+
+@media only screen and (max-width: 580px) {
 
   .main {
   display: grid;
@@ -21,8 +28,4 @@
 }
 
 
-@media only screen and (max-width: 1000px) {
-  
 
-
-}

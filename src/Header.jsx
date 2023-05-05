@@ -28,8 +28,8 @@ function Header() {
                     <h2>+48 601 308 388</h2>
                 </div>
             <div className='navbar' style={{top: show ? '45px' : '0px' , transition: '0.1s ease-out', height: show ? '100px' : '70px'}}>
-                <div className='navbar--left'>
-                    <img src='src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/>
+                <div className='#'>
+                <a href="link address"><img src='src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></a>
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
@@ -37,7 +37,7 @@ function Header() {
                         <SearchOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', right:'35px', top:'5px'}}/>
                     </div>
                     <ul>
-                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="#">DOSTAWA</a></li>
+                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="item.html">DOSTAWA</a></li>
                         <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}} /><a href="#">KOSZYK</a></li>
                         <li><PhoneOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="#">KONTAKT</a></li>
                     </ul>

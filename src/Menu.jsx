@@ -16,23 +16,37 @@ let Lambda = [
 ];
 let Efficiency = ['EPS 50', 'EPS 60', 'EPS 70', 'EPS 80', 'EPS 100', 'EPS 120', 'EPS 150', 'EPS 200'];
 
-const choice = (element) =>
+
+const choice = (element, handleChange) =>
   element.map((item) => (
     <div className='company'>
       <input 
         type='checkbox'
-        value={item} />
+        value={item} 
+        onChange={handleChange}/>
       <label>{item}</label>
     </div>
   ));
 
-function Menu() {
+function Menu({checkedItems, setCheckedItems}) {
   const [showItems, setShowItems] = useState({});
   const [showFilter, setShowFilter] = useState(true);
 
   const handleNav = (name) => {
     setShowItems({ ...showItems, [name]: !showItems[name] });
   };
+
+ 
+
+  const handleChange = (event) => {
+    const value = event.target.value;
+    if (event.target.checked) {
+      setCheckedItems([...checkedItems, value]);
+    } else {
+      setCheckedItems(checkedItems.filter(item => item !== value));
+    }
+    console.log(checkedItems);
+  }
 
 
   const dropdown = (name, id) => (
@@ -55,9 +69,9 @@ function Menu() {
         <div className='config--bar'>
             <div className='search--bar'>
                 <input type="text" id="search-bar" placeholder=""/>
-                <SearchOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', right:'35px', top:'5px'}}/>
+                <SearchOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', float: "right", bottom: "30px", left: "-10px" }}/>
             </div>
-            <button className='filter-btn' onClick={() => setShowFilter(!showFilter)}><FilterOutlined/></button>
+            <button className='filter-btn' onClick={() => setShowFilter(!showFilter)}><FilterOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', left: '-11px'}}/></button>
         </div>
       {showFilter && (
         <div className='menu'>
@@ -70,17 +84,17 @@ function Menu() {
 
       <div className='filter'>
         <h2>Producent</h2>
-        <div className='filter--choices'>{choice(Companies)}</div>
+        <div className='filter--choices'>{choice(Companies, handleChange)}</div>
       </div>
 
       <div className='filter'>
         <h2>Współczynnik przewodzenia ciepła λD</h2>
-        <div className='filter--choices'>{choice(Lambda)}</div>
+        <div className='filter--choices'>{choice(Lambda, handleChange)}</div>
       </div>
 
       <div className='filter'>
         <h2>Wytrzymałość na ściskanie CS (10) [kPa]</h2>
-        <div className='filter--choices'>{choice(Efficiency)}</div>
+        <div className='filter--choices'>{choice(Efficiency, handleChange)}</div>
       </div>
     </div>)}
     </div>

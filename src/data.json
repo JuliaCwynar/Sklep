@@ -2,6 +2,7 @@
     {
     "id": 1,
     "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "producent": "Swisspor",
     "image": "src/assets/images/EPS70-038paczka600x382.png",
     "description": "λ = 0,031\r\nTR 100.",
     "min_price": 52.21,
@@ -13,6 +14,7 @@
 {
     "id": 2,
     "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "producent": "Swisspor",
     "image": "src/assets/images/EPS70-038paczka600x382.png",
     "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
     "min_price": 43.12,
@@ -24,6 +26,7 @@
 {
     "id": 2,
     "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "producent": "Swisspor",
     "image": "src/assets/images/EPS70-038paczka600x382.png",
     "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
     "min_price": 43.12,
@@ -35,6 +38,7 @@
 {
     "id": 2,
     "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "producent": "Swisspor",
     "image": "src/assets/images/EPS70-038paczka600x382.png",
     "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
     "min_price": 43.12,
@@ -46,6 +50,7 @@
 {
     "id": 2,
     "name": "Swisspor EPS 70-038 fasada, podłoga, biały λ 0,038",
+    "producent": "Besser",
     "image": "src/assets/images/EPS70-038paczka600x382.png",
     "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
     "min_price": 43.12,

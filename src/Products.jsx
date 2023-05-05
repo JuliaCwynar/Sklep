@@ -1,7 +1,9 @@
 import React from 'react'
 import data from './data.json'
 
-function Products() {   
+function Products({checkedItems, setCheckedItems}) {   
+
+    let filteredItems = data.filter((item) => checkedItems.includes(item.category));
 
     let items = data.map((item) => (
         <div className='item' key={item.id}>
