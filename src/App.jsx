@@ -6,6 +6,8 @@ import Products from './Products'
 import './Products.css'
 import './Menu.css'
 import { useState } from 'react'
+import Footer from './Footer'
+import './Footer.css'
 
 function App() {
 
@@ -18,6 +20,7 @@ function App() {
         <Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
         <Products checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
       </div>
+      <Footer />
    </div>
   )
 }

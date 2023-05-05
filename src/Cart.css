@@ -1,0 +1,133 @@
+.cart--item {
+    margin-bottom: 50px;
+    border: 1px solid black;
+}
+
+.cart {
+    margin: 150px auto 100px auto;
+    width: 80vw;
+    padding: 1vw;
+}
+
+.cart .row {
+    background-color: #fffbf5;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+
+}
+
+.cart .column {
+    border: 1px solid pink;
+    justify-content: center;
+    display: grid;
+    margin: 1vw;
+    width: 50%;
+}
+
+.cart--item--row {
+    text-align: left;
+    line-height: 10px;
+    display: grid;
+    grid-template-columns: 160px auto;
+    border: 1px solid green;
+}
+
+.cart--item--row .item--title {
+    width: 100%;
+    background-color: blueviolet;
+}
+
+.cart--description {
+}
+
+.cart--item--row img {
+    width: 150px;
+}
+
+.item--info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.item--info1 {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border: 1px solid blue;
+    line-height: 0vw;
+}
+
+.item--info2 {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+    padding: 0 20px 0 20px;
+}
+
+.p--col {
+    background-color: yellow;
+}
+
+.data {
+    margin: auto;
+    justify-content: center;
+
+}
+.insert--data {
+
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.data--column {
+    margin: auto;
+    justify-content: center;
+    width: 50%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.data--row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.data input {
+    width: 90%;
+    margin: auto;
+}
+
+@media only screen and (max-width: 880px) {
+    .cart .row{
+        display: grid;
+        grid-template-columns: auto;
+        width: 100%;
+        margin: 0px;
+    }
+
+    .cart .column {
+        width: 100%;
+        margin: 0px;
+        justify-content: center;
+        }
+
+    .cart {
+        padding: 0px;
+        margin: auto;
+        margin-top: 150px;
+        width: 90%;
+    }
+    
+    p {
+        font-size: 12px;
+    }
+
+    .cart--item {
+        padding: 0px;
+        width: 100%;
+    }
+
+
+}

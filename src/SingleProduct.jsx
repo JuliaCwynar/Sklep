@@ -48,7 +48,6 @@ function SingleProduct() {
                 </div>
                 <h4>Ilość m^3 w opakowaniu: </h4>
                 <div className='product--calculated'>
-                    <button>Oblicz ilość paczek</button>
                     <div>
                         <input type='number'></input>
                         <button>Dodaj do koszyka</button>

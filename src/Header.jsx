@@ -38,7 +38,7 @@ function Header() {
                     </div>
                     <ul>
                         <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="item.html">DOSTAWA</a></li>
-                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}} /><a href="#">KOSZYK</a></li>
+                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}} /><a href="bag.html">KOSZYK</a></li>
                         <li><PhoneOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="#">KONTAKT</a></li>
                     </ul>
                 </div>
