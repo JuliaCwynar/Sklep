@@ -1,15 +1,25 @@
 .cart--item {
     margin-bottom: 50px;
-    border: 1px solid black;
+    border: none;
+    border: 1px solid rgba(0, 0, 0, 0.077);
+    border-radius: 5px;
+    padding: 10px;
 }
 
 .cart {
     margin: 150px auto 100px auto;
     width: 80vw;
     padding: 1vw;
+    
+    
+}
+
+.row h2:first-child {
+    text-transform: uppercase;
 }
 
 .cart .row {
+    
     background-color: #fffbf5;
     justify-content: center;
     width: 100%;
@@ -18,7 +28,9 @@
 }
 
 .cart .column {
-    border: 1px solid pink;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-radius: 5px;
     justify-content: center;
     display: grid;
     margin: 1vw;

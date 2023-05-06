@@ -1,13 +1,13 @@
-import './Header.css'
-import Header from './Header'
+import '/src/Components/Header.css'
+import Header from '../Components/Header'
 import './App.css'
-import Menu from './Menu'
+import Menu from '../Components/Menu'
 import Products from './Products'
 import './Products.css'
-import './Menu.css'
+import '/src/Components/Menu.css'
 import { useState } from 'react'
-import Footer from './Footer'
-import './Footer.css'
+import Footer from '../Footer/Footer'
+import '/src/Footer/Footer.css'
 
 function App() {
 

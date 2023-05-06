@@ -80,18 +80,15 @@
     
 }
 
-.search--bar input {
+Input {
     border: none;
     padding: 2px;
-    width: 400px;
+    width: 300px;
     height: 30px;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
 }
 
-.search--bar input:active {
-    border: none;
-}
 
 @media only screen and (max-width: 1000px) {
 

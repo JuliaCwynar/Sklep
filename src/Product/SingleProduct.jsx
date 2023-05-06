@@ -1,5 +1,5 @@
 import React from 'react'
-import data from './data_exp.json'
+import data from '/src/assets/data_exp.json'
 
 function SingleProduct() {   
 

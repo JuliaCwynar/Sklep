@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import { ShoppingCartOutlined, PhoneOutlined, SearchOutlined } from '@ant-design/icons'
+import { Input} from 'antd';
+import { Phone, ShoppingCart, Truck, } from 'react-feather';
+
+const { Search } = Input;
 
 function Header() {
 
@@ -33,13 +36,12 @@ function Header() {
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
-                        <input type="text" id="search-bar" placeholder=""/>
-                        <SearchOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', right:'35px', top:'5px'}}/>
+                        <Search />
                     </div>
                     <ul>
-                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="item.html">DOSTAWA</a></li>
-                        <li><ShoppingCartOutlined style={{ fontSize: '40px', color: '#000d2a'}} /><a href="bag.html">KOSZYK</a></li>
-                        <li><PhoneOutlined style={{ fontSize: '40px', color: '#000d2a'}}/><a href="#">KONTAKT</a></li>
+                        <li><a href="item.html"><Truck size={30} color='#000d2a'/>DOSTAWA</a></li>
+                        <li><a href="bag.html"><ShoppingCart size={30} color='#000d2a' />KOSZYK</a></li>
+                        <li><a href="#"><Phone size={30} color='#000d2a'/>KONTAKT</a></li>
                     </ul>
                 </div>
             </div>

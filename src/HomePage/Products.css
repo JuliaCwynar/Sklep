@@ -27,7 +27,7 @@
 .item {
     margin: 20px;
     width: 300px;
-    border: 1px solid rgba(0, 0, 0, 0.195);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     border-radius: 5px;
 }
 

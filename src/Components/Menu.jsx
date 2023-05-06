@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
+import { Checkbox } from 'antd';
 
 let Companies = ['Besser', 'Swisspor'];
 let Lambda = [
@@ -20,8 +21,7 @@ let Efficiency = ['EPS 50', 'EPS 60', 'EPS 70', 'EPS 80', 'EPS 100', 'EPS 120', 
 const choice = (element, handleChange) =>
   element.map((item) => (
     <div className='company'>
-      <input 
-        type='checkbox'
+      <Checkbox style={{position: 'relative', top: '5px', paddingRight: '5px'}}
         value={item} 
         onChange={handleChange}/>
       <label>{item}</label>

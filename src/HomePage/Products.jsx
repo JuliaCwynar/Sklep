@@ -1,5 +1,5 @@
 import React from 'react'
-import data from './data.json'
+import data from '/src/assets/data.json'
 
 function Products({checkedItems, setCheckedItems}) {   
 
