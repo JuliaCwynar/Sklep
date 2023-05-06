@@ -68,10 +68,10 @@ function Menu({checkedItems, setCheckedItems}) {
     <div className='filter--menu'>
         <div className='config--bar'>
             <div className='search--bar'>
-                <input type="text" id="search-bar" placeholder=""/>
+                <input type="text" className="search-bar" placeholder=""/>
                 <SearchOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', float: "right", bottom: "30px", left: "-10px" }}/>
             </div>
-            <button className='filter-btn' onClick={() => setShowFilter(!showFilter)}><FilterOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', left: '-11px'}}/></button>
+            <button className='filter-btn' onClick={() => setShowFilter(!showFilter)}><FilterOutlined style={{ fontSize: '25px', color: '#000d2a70', position:'relative', bottom: '5px'}}/></button>
         </div>
       {showFilter && (
         <div className='menu'>

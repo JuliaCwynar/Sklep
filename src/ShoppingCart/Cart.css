@@ -1,15 +1,29 @@
+.item--info2 {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid rgba(128, 128, 128, 0.085);
+    background-color: rgba(128, 128, 128, 0.093);
+}
+
+.item--info2 h3 {
+    margin: 10px;
+    font-weight: 600;
+}
+
 .cart--item {
     margin-bottom: 50px;
     border: none;
     border: 1px solid rgba(0, 0, 0, 0.077);
     border-radius: 5px;
-    padding: 10px;
+    padding: 1%;
+    width: 98%;
 }
 
 .cart {
     margin: 150px auto 100px auto;
-    width: 80vw;
-    padding: 1vw;
+    width: 80%;
+    padding: 0px;
     
     
 }
@@ -19,7 +33,6 @@
 }
 
 .cart .row {
-    
     background-color: #fffbf5;
     justify-content: center;
     width: 100%;
@@ -31,85 +44,57 @@
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     background-color: white;
     border-radius: 5px;
-    justify-content: center;
-    display: grid;
     margin: 1vw;
     width: 50%;
+    padding: 2vw;
+;
 }
 
 .cart--item--row {
     text-align: left;
     line-height: 10px;
     display: grid;
-    grid-template-columns: 160px auto;
-    border: 1px solid green;
+    grid-template-columns: 150px auto;
+    border: 1px solid rgba(128, 128, 128, 0.093);
+    gap: 0.5vw;
 }
 
-.cart--item--row .item--title {
-    width: 100%;
-    background-color: blueviolet;
-}
 
 .cart--description {
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .cart--item--row img {
-    width: 150px;
-}
-
-.item--info {
-    display: grid;
-    grid-template-columns: 50% 50%;
-}
-
-.item--info1 {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    border: 1px solid blue;
-    line-height: 0vw;
-}
-
-.item--info2 {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid blue;
-    padding: 0 20px 0 20px;
-}
-
-.p--col {
-    background-color: yellow;
-}
-
-.data {
-    margin: auto;
-    justify-content: center;
-
-}
-.insert--data {
-
     width: 100%;
-    display: grid;
-    grid-template-columns: auto;
+    object-fit: cover;
 }
 
-.data--column {
-    margin: auto;
-    justify-content: center;
-    width: 50%;
-    display: grid;
-    grid-template-columns: auto;
-}
-
-.data--row {
-    width: 100%;
+.summary--info {
     display: grid;
     grid-template-columns: auto auto;
+    text-align: left;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-radius: 5px;
+
+    
 }
 
-.data input {
-    width: 90%;
-    margin: auto;
+.summary--info p{
+    margin: 0px;
+    padding: 0.5vw;
+    padding-left: 1vw;
+    border: 0.01em solid rgba(128, 128, 128, 0.089);
 }
+
+
+.cart--total {
+    margin: auto;
+    margin-top: 5vw;
+}
+
+
 
 @media only screen and (max-width: 880px) {
     .cart .row{
@@ -143,3 +128,4 @@
 
 
 }
+

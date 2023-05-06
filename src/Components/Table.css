@@ -1,0 +1,29 @@
+
+
+.item--info {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.item--info1 {
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    border-radius: 5px;
+}
+
+.item--info2 {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid blue;
+}
+
+.item--info1 p {
+    border: 0.01em solid rgba(128, 128, 128, 0.089);
+    margin: 0px;
+}
+
+.p--col {
+    background-color: rgba(128, 128, 128, 0.093);
+    font-weight: 500;
+}

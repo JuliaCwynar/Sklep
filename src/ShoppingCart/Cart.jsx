@@ -1,6 +1,7 @@
-import { Input } from 'antd';
+import { Input, Button } from 'antd';
 import CartItem from './CartItem'
 import ContactForm from '/src/Components/ContactForm'
+import reCAPTCHA from "react-google-recaptcha"
 
 
 
@@ -16,20 +17,25 @@ function Cart() {
                     <h2>Szczegóły zamówienia</h2>
                     <CartItem />
                     <CartItem />
+                    <CartItem />
                 </div>
+                
                 <div className='column'>
-                    <ContactForm />
+                    <ContactForm />   
                     <div className='cart--summary'>
                         <h2>Podsumowanie zamówienia</h2>
-                        <p>Suma</p>
-                        <p>Dopłata</p>
-                    </div>
-                    <div className='cart--discount'>
-                        <p>Wprowadź kod zniżkowy</p>
-                        <Input/>
+                        <div className='summary--info'>
+                            <span className='p--col'><p>Koszyk</p></span><p>100zł</p>
+                            <span className='p--col'><p>Dostawa</p></span><p>100zł</p>
+                            <span className='p--col'><p>VAT</p></span><p>199zł</p>
+                            <span className='p--col'><p >Suma</p></span><p>100zł</p>
+                        </div>
                     </div>
                     <div className='cart--total'>
-                        <button>Złóż zamówienie</button>    
+                        <form>
+                        
+                        <Button size='large' type="primary">Złóż zamówienie</Button>   
+                        </form>
                     </div>
                 </div>
             </div>

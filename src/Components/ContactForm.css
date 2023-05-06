@@ -1,0 +1,36 @@
+
+.data {
+    margin: 5px;
+    width: 100%
+
+}
+
+.data--container {
+    border: 0.01em solid rgba(128, 128, 128, 0.089);
+    border-radius: 5px;
+    padding: 2vw;
+}
+
+.insert--data {
+    padding: auto;
+    border-radius: 5px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+}
+
+.data--column {
+
+    justify-content: center;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+.data--row {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+
