@@ -1,5 +1,6 @@
 import React from 'react'
 import data from '/src/assets/data.json'
+import { Pagination } from 'antd';
 
 function Products({checkedItems, setCheckedItems}) {   
 
@@ -22,6 +23,7 @@ function Products({checkedItems, setCheckedItems}) {
             <div className='products'>
             {items}
             </div>
+            <Pagination defaultCurrent={1} total={8} />;
         </div>
     )
 }

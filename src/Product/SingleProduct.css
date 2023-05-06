@@ -1,34 +1,45 @@
 .product {
-    padding: 1vw;
-    margin: 200px 3vw;
+    padding: 3vw;
+    border-radius: 5px;
+    margin: auto;
     font-size: 10px;
     text-align: left;
-    width: 60vw;
-    background-color: #fffbf5;
+    width: 50vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 200px;
 
+}
+
+.product h1 {
+  margin-top: 0px;
+  margin-left: 1vw;
 }
 
 .product--row {
     display: grid;
-    grid-template-columns: auto 33vw;
+    grid-template-columns: auto auto;
 
 }
 
 .product--description img{
-    margin: auto;
     width: 25vw;
     
 }
 
+
 .product--pricing {
-    background-color: yellow;
-    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.053);
+    border-radius: 10px;
+    padding: 2vw;
+    border: 1px solid rgba(128, 128, 128, 0.142);
 }
 
 .product--pricing h3 {
     margin: 0;
+    font-weight: 300;
     font-size: 30px;
-    background-color: pink;
   }
 
 .product--pricing p:first {
@@ -45,41 +56,36 @@
     margin-bottom: 10px;
   }
 
-  .product--pricing label {
-    font-size: 16px;
-    margin-bottom: 10px;
-    margin-right: 1vw;
-
-  }
 
   
   .product--pricing span {
     font-weight: bold;
   }
   
-  .product--pricing select {
-    margin-bottom: 20px;
-  }
-  
+
   .product--calculated {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+    width: 100%;
+    justify-content: space-between;
   }
-  
-  .product--calculated button {
-    margin-bottom: 10px;
+
+  .product--calculations {
+    margin-top: 3vw;
+    font-size: 18px;
   }
-  
-  .product--calculated input[type="number"] {
-    width: 80px;
-    height: 30px;
-    margin-right: 10px;
-    font-size: 16px;
-    text-align: center;
+
+  .product--calculations h2{
+    margin-left: 2vw;
+    font-size: 20px;
+    font-weight: 400;
   }
-  
-  .product--calculated button:last-child {
-    margin-left: 10px;
+
+  .description--table {
+    display: grid;
+    grid-template-columns: 6vw 19vw;
+  }
+
+  .product--description p{
+    margin: 0px;
+    font-size: 20px;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.204);
   }

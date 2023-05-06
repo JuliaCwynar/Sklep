@@ -2,11 +2,12 @@
     position: relative;
     top: 200px;
     width: 300px;
-    background-color: #fffbf5;
+    background-color:rgba(0, 0, 0, 0.053);
     text-align: left;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
     height: 1100px;
+    margin-right: 2vw;
 }
 
 .menu h2 {

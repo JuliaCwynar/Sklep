@@ -36,7 +36,7 @@ function Header() {
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
-                        <Search />
+                        <Search status="warning" style={{width: 500}}/>
                     </div>
                     <ul>
                         <li><a href="item.html"><Truck size={30} color='#000d2a'/>DOSTAWA</a></li>

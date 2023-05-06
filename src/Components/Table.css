@@ -12,11 +12,7 @@
     border-radius: 5px;
 }
 
-.item--info2 {
-    display: flex;
-    justify-content: space-between;
-    border: 1px solid blue;
-}
+
 
 .item--info1 p {
     border: 0.01em solid rgba(128, 128, 128, 0.089);
@@ -26,4 +22,9 @@
 .p--col {
     background-color: rgba(128, 128, 128, 0.093);
     font-weight: 500;
+}
+
+.product--calculations .item--info1 p {
+    padding: 5px;
+    padding-left: 15px;
 }
