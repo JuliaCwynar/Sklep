@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
 import {DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
 import { Checkbox } from 'antd';
-import data from '/src/assets/data.json'
-import { filter } from '@chakra-ui/react';
 
 let Companies = ['Besser', 'Swisspor'];
 let Lambda = [

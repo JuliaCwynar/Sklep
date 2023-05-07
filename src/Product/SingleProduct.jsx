@@ -1,5 +1,5 @@
 import React from 'react'
-import data from '/src/assets/data_exp.json'
+import data from '../assets/data_exp.json'
 import { Button, InputNumber, Select } from 'antd';
 import TableData from '../Components/Table';
 

@@ -1,6 +1,6 @@
 import { Button } from 'antd';
 import CartItem from './CartItem'
-import ContactForm from '/src/Components/ContactForm'
+import ContactForm from '../Components/ContactForm'
 import reCAPTCHA from "react-google-recaptcha"
 
 

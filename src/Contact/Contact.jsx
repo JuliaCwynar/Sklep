@@ -1,7 +1,6 @@
 import React from 'react'
 import { Input } from 'antd'
 import './Contact.css'
-import Map from './Map.jsx'
 
 function Contact() {   
 
@@ -23,7 +22,7 @@ function Contact() {
                 <p>+48 601 308 388</p>
                 <p>krzysztof.cwynar@biuro-hossa.eu</p>
                 <div className='contact--map'>
-                    <Map />
+            
                 </div>
             </div>
         </div>

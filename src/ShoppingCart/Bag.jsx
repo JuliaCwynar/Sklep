@@ -1,12 +1,12 @@
-import '/src/Components/Header.css'
+import '../Components/Header.css'
 import Header from '../Components/Header'
-import '/src/HomePage/App.jsx'
-import '/src/HomePage/Products.css'
-import '/src/Components/Menu.css'
+import '../HomePage/App.jsx'
+import '../HomePage/Products.css'
+import '../Components/Menu.css'
 import Footer from '../Footer/Footer'
-import '/src/Footer/Footer.css'
-import Cart from '/src/ShoppingCart/Cart'
-import '/src/ShoppingCart/Cart.css'
+import '../Footer/Footer.css'
+import Cart from '../ShoppingCart/Cart'
+import '../ShoppingCart/Cart.css'
 
 function Bag() {
 
