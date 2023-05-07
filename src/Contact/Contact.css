@@ -1,0 +1,15 @@
+.contact {
+
+    background-color: pink;
+    width: 70vw;
+    justify-content: center;
+    margin: auto;
+    gap: 1vw;
+    
+
+}
+
+.contact--column {
+    padding: 1vw;
+    width: 50%;
+}

@@ -17,6 +17,7 @@
     "@mui/icons-material": "^5.11.16",
     "antd": "^5.4.6",
     "framer-motion": "^10.12.8",
+    "google-map-react": "^2.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-feather": "^2.0.10",

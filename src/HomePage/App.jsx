@@ -8,10 +8,11 @@ import '/src/Components/Menu.css'
 import { useState } from 'react'
 import Footer from '../Footer/Footer'
 import '/src/Footer/Footer.css'
+import data from '/src/assets/data.json'
 
 function App() {
 
-  const [checkedItems, setCheckedItems] = useState([]);
+  const [checkedItems, setCheckedItems] = useState([data]);
 
   return (
    <div className='homepage'>

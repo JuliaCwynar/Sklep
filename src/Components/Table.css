@@ -28,3 +28,7 @@
     padding: 5px;
     padding-left: 15px;
 }
+
+.product--calculations .item--info  {
+    border-radius: 5px;
+}

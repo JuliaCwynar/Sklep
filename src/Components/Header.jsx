@@ -40,8 +40,8 @@ function Header() {
                     </div>
                     <ul>
                         <li><a href="item.html"><Truck size={30} color='#000d2a'/>DOSTAWA</a></li>
+                        <li><a href="contact.html"><Phone size={30} color='#000d2a'/>KONTAKT</a></li>
                         <li><a href="bag.html"><ShoppingCart size={30} color='#000d2a' />KOSZYK</a></li>
-                        <li><a href="#"><Phone size={30} color='#000d2a'/>KONTAKT</a></li>
                     </ul>
                 </div>
             </div>

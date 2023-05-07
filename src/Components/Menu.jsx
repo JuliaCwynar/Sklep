@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import {DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
 import { Checkbox } from 'antd';
+import data from '/src/assets/data.json'
+import { filter } from '@chakra-ui/react';
 
 let Companies = ['Besser', 'Swisspor'];
 let Lambda = [
@@ -17,6 +19,7 @@ let Lambda = [
 ];
 let Efficiency = ['EPS 50', 'EPS 60', 'EPS 70', 'EPS 80', 'EPS 100', 'EPS 120', 'EPS 150', 'EPS 200'];
 
+let Categories = ['producent','lambda', 'efficiency'];
 
 const choice = (element, handleChange) =>
   element.map((item) => (
@@ -32,20 +35,41 @@ function Menu({checkedItems, setCheckedItems}) {
   const [showItems, setShowItems] = useState({});
   const [showFilter, setShowFilter] = useState(true);
 
+  const [filters, setFilters] = useState([]);
+  const [unfilteredList, setUnfilteredList] = useState([checkedItems[0]]);
+
   const handleNav = (name) => {
     setShowItems({ ...showItems, [name]: !showItems[name] });
   };
 
- 
-
-  const handleChange = (event) => {
-    const value = event.target.value;
+  const handleChange = (event, category) => {
+    const producent = event.target.value;
+    let newFilters;
+  
     if (event.target.checked) {
-      setCheckedItems([...checkedItems, value]);
-    } else {
-      setCheckedItems(checkedItems.filter(item => item !== value));
+      newFilters = [...filters, producent];
+    } else  {
+      newFilters = filters.filter((filter) => filter !== producent);
     }
-    console.log(checkedItems);
+    const filteredArray = newFilters.length == 1 ? checkedItems[0].filter(item => item.producent.includes(newFilters[0] || newFilters[1])) : unfilteredList[0];
+    console.log(filteredArray)
+    setCheckedItems([filteredArray]);
+    setFilters(newFilters);
+  }
+
+  const changeProducent = (event) => {
+    const producent = event.target.value;
+    let newFilters;
+  
+    if (event.target.checked) {
+      newFilters = [...filters, producent];
+    } else  {
+      newFilters = filters.filter((filter) => filter !== producent);
+    }
+    const filteredArray = newFilters.length == 1 ? checkedItems[0].filter(item => item.producent.includes(newFilters[0] || newFilters[1])) : unfilteredList[0];
+    console.log(filteredArray)
+    setCheckedItems([filteredArray]);
+    setFilters(newFilters);
   }
 
 
@@ -84,7 +108,7 @@ function Menu({checkedItems, setCheckedItems}) {
 
       <div className='filter'>
         <h2>Producent</h2>
-        <div className='filter--choices'>{choice(Companies, handleChange)}</div>
+        <div className='filter--choices'>{choice(Companies, changeProducent)}</div>
       </div>
 
       <div className='filter'>
