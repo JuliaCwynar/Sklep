@@ -1,12 +1,17 @@
 import { Button } from 'antd';
 import CartItem from './CartItem'
 import ContactForm from '../Components/ContactForm'
-import reCAPTCHA from "react-google-recaptcha"
 
 
 
+function Cart({cart, setCart}) {
 
-function Cart() {
+    console.log(cart)
+    
+    let cartItems = cart.map((item) => (
+        <CartItem />
+    ))
+
     return (
         <div className='cart'>
             <div className='row'>
@@ -15,9 +20,7 @@ function Cart() {
             <div className='row'>
                 <div className='column'>
                     <h2>Szczegóły zamówienia</h2>
-                    <CartItem />
-                    <CartItem />
-                    <CartItem />
+                    {cartItems}
                 </div>
                 
                 <div className='column'>

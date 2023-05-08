@@ -1,12 +1,20 @@
 import React, { useState, useEffect } from 'react'
 import { Input} from 'antd';
 import { Phone, ShoppingCart, Truck, } from 'react-feather';
+import CartPrompt from './CartPrompt.jsx'
 
 const { Search } = Input;
 
-function Header() {
+function Header({cart, setCart}) {
 
+    const [showCart, setShowCart] = useState(false);
     const [show, setShow] = useState(false);
+
+    const handleChange = () => {
+        setShowCart(!showCart)
+        console.log(cart.length)
+    }
+
 
     useEffect(() => {
       if (typeof window !== "undefined") {
@@ -22,6 +30,7 @@ function Header() {
         };
       }
     }, []);
+
     
 
     return (
@@ -41,7 +50,19 @@ function Header() {
                     <ul>
                         <li><a href="item.html"><Truck size={30} color='#000d2a'/>DOSTAWA</a></li>
                         <li><a href="contact.html"><Phone size={30} color='#000d2a'/>KONTAKT</a></li>
-                        <li><a href="bag.html"><ShoppingCart size={30} color='#000d2a' />KOSZYK</a></li>
+                        <div className='header--cart'>
+                            <li><a href="#"><ShoppingCart size={30} color='#000d2a' onClick={handleChange}/>KOSZYK</a></li>
+                            {showCart && (
+                                <div id="cart-prompt">
+                                <CartPrompt cart={cart} setCart={setCart} />
+                            </div>)}
+                            {cart.length > 0 && (
+                                <div className='cart--size'>
+                                    {cart.length}
+                                </div>
+                            )
+                            }
+                        </div>
                     </ul>
                 </div>
             </div>

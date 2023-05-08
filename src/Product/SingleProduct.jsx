@@ -1,10 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react'
 import data from '../assets/data_exp.json'
 import { Button, InputNumber, Select } from 'antd';
 import TableData from '../Components/Table';
 
-function SingleProduct() {   
+function SingleProduct({cart, setCart}) {
+    
+    const [quantity, setQuantity] = useState('null');
+    const [thickness, setThickness] = useState('null')
 
+    const handleChange = () => {
+        const newItem = {
+            item: data,
+            thickness: thickness,
+            quantity: quantity,
+          };
+          setCart(prevCart => [...prevCart, newItem]);
+          console.log(cart);
+        }
 
     return (
         <div className='product'>
@@ -30,8 +42,9 @@ function SingleProduct() {
                     <span>VAT: {data.price*0.23}</span>
                     <p>Dostawa</p>
                     <p>Stan magazynowy: <span>Dostępność duża</span></p>
+                    <form>
                     <p>Grubość
-                <Select
+                    <Select
                         size='medium'
                         defaultValue="lucy"
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
@@ -40,17 +53,18 @@ function SingleProduct() {
                             { value: 'lucy', label: 'Lucy' },
                             { value: 'Yiminghe', label: 'yiminghe' },
                                 ]}
+                        onChange={value => setThickness(value)}
                     /></p>
-                    <p>Grubość
-                <Select
+                    <p>Frezowany
+                    <Select
                         size='medium'
                         defaultValue="lucy"
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'tak', label: 'tak' },
+                            { value: 'nie', label: 'nie' },
                                 ]}
+
                     /></p>
                 <h4>Ilość m^3 w opakowaniu: </h4>
                 <div className='product--calculated'>
@@ -60,14 +74,17 @@ function SingleProduct() {
                         max={10} 
                         defaultValue={3}
                         style ={{float: 'left'}}
+                        onChange={value => setQuantity(value)}
                     />
                         <Button 
                             size='large' 
                             type="primary"
                             style ={{float: 'right'}}
+                            onClick={() => handleChange()}
                             >Dodaj do koszyka
                         </Button>
                 </div>
+                </form>
             </div>
             </div>
             <div className='product--calculations'>

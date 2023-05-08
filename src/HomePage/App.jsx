@@ -9,6 +9,7 @@ import { useState } from 'react'
 import Footer from '../Footer/Footer'
 import '../Footer/Footer.css'
 import data from '../assets/data.json'
+import { cart, setCart} from '../Product/Item.jsx'
 
 function App() {
 
@@ -16,7 +17,7 @@ function App() {
 
   return (
    <div className='homepage'>
-      <Header />
+      <Header cart={cart} setCart={setCart}/>
       <div className='main'>
         <Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
         <Products checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>

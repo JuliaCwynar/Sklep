@@ -1,0 +1,46 @@
+.cart--prompt {
+    background-color: pink;
+    position: absolute;
+    width: 300px;
+    right: 3vw;
+}
+
+.cart--prompt .image img {
+    width: 7vw;
+    height: auto;
+}
+
+.cart--item--row {
+    display: grid;
+    grid-template-columns: 9vw auto;
+}
+
+.cart--item h1, .cart--item h2 {
+    font-size: 20px;
+    background-color: yellow;
+    text-align: left;
+}
+
+.cart--item h2 {
+    font-size: 15px;
+}
+
+.cart--item {
+    border: 1px solid black;
+    padding: 0vw;
+
+}
+
+.cart--size {
+    position: absolute;
+    bottom: 3.5vw;
+    right: 10.5vw;
+    border-radius: 50%;
+    width: 20px;
+    color: black;
+    height: 20px;
+    padding: 3px;
+    background: #de2626df;
+    text-align: center;
+    font: 20px Arial, sans-serif;
+}
