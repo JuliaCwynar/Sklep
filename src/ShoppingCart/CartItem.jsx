@@ -6,23 +6,23 @@ import { Select, InputNumber } from 'antd';
 function CartItem(item) {
 return (
     <div className='cart--item'>
-         <p className='item--title'>{item.name}</p>
-        <div className={'cart--item--row'}>
-            <img src={item.image}></img>
-            <div className={item.description}>
+         <p className='item--title'>Swisspor LAMBDA mega WHITE ®fasada grafit λ 0,031</p>
+        <div className='cart--item--row'>
+            <img src='src/assets/images/EPS70-038paczka600x382.png'></img>
+            <div className='cart--description'>
                 <p>Ilość
                     <InputNumber 
                         size='small'
                         min={1} 
                         max={10} 
-                        defaultValue={3}
+                        defaultValue={item.name}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                     />
                 </p>
                 <p>Grubość
                 <Select
                         size='small'
-                        defaultValue="lucy"
+                        defaultValue={item.thickness}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
                             { value: 'jack', label: 'Jack' },

@@ -1,10 +1,11 @@
 import './CartPrompt.css'
 import { Button } from 'antd'
-
+import { Link, useLocation } from 'react-router-dom'
 
 
 function CartPrompt({cart, setCart}) {
 
+    const pathname = useLocation().pathname
     console.log(cart)
 
     let items = cart.map((product) => (
@@ -25,14 +26,16 @@ function CartPrompt({cart, setCart}) {
     ))
     
     return (
-        <div className='cart--prompt'>
-            <div className='cart--element'>
-                {items}
+        pathname !== "/bag" ? (
+            <div className='cart--prompt'>
+                <div className='cart--element'>
+                    {items}
+                </div>
+                <div className='cart--button'>
+                    <Link to="/bag"><Button>Przejdź do koszyka</Button></Link>
+                </div>
             </div>
-            <div className='cart--button'>
-                <a href="bag.html"><Button>Przejdź do koszyka</Button></a>
-            </div>
-        </div>
+        ) : null
     )
 }
 

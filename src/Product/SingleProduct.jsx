@@ -2,11 +2,15 @@ import React, { useState } from 'react'
 import data from '../assets/data_exp.json'
 import { Button, InputNumber, Select } from 'antd';
 import TableData from '../Components/Table';
+import '../Components/Header.css'
+import '../HomePage/App.css'
+import '../Product/SingleProduct.css'
+import '../Components/Menu.css'
 
 function SingleProduct({cart, setCart}) {
     
-    const [quantity, setQuantity] = useState('null');
-    const [thickness, setThickness] = useState('null')
+    const [quantity, setQuantity] = useState(1);
+    const [thickness, setThickness] = useState(10)
 
     const handleChange = () => {
         const newItem = {

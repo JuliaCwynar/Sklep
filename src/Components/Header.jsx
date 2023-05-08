@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { Input} from 'antd';
 import { Phone, ShoppingCart, Truck, } from 'react-feather';
 import CartPrompt from './CartPrompt.jsx'
+import { Link, useLocation } from 'react-router-dom'
 
 const { Search } = Input;
 
 function Header({cart, setCart}) {
 
     const [showCart, setShowCart] = useState(false);
-    const [show, setShow] = useState(false);
+    const [show, setShow] = useState(true);
 
     const handleChange = () => {
         setShowCart(!showCart)
@@ -31,6 +32,9 @@ function Header({cart, setCart}) {
       }
     }, []);
 
+    useEffect(() => {
+        setShowCart(false); 
+        }, [location, setShowCart]);
     
 
     return (
@@ -41,27 +45,27 @@ function Header({cart, setCart}) {
                 </div>
             <div className='navbar' style={{top: show ? '45px' : '0px' , transition: '0.1s ease-out', height: show ? '100px' : '70px'}}>
                 <div className='#'>
-                <a href="link address"><img src='src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></a>
+                <Link to="/"><img src='src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></Link>
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
                         <Search status="warning" style={{width: 500}}/>
                     </div>
                     <ul>
-                        <li><a href="item.html"><Truck size={30} color='#000d2a'/>DOSTAWA</a></li>
-                        <li><a href="contact.html"><Phone size={30} color='#000d2a'/>KONTAKT</a></li>
+                        <li><Link to="#"><Truck size={30} color='#000d2a'/>DOSTAWA</Link></li>
+                        <li><Link to="/contact"><Phone size={30} color='#000d2a'/>KONTAKT</Link></li>
                         <div className='header--cart'>
-                            <li><a href="#"><ShoppingCart size={30} color='#000d2a' onClick={handleChange}/>KOSZYK</a></li>
-                            {showCart && (
-                                <div id="cart-prompt">
-                                <CartPrompt cart={cart} setCart={setCart} />
-                            </div>)}
-                            {cart.length > 0 && (
+                            <li>{cart.length > 0 && (
                                 <div className='cart--size'>
                                     {cart.length}
                                 </div>
                             )
-                            }
+                            }<Link to="#"><ShoppingCart size={30} color='#000d2a' onClick={handleChange}/>KOSZYK</Link></li>
+                            {showCart && (
+                                <div id="cart-prompt">
+                                <CartPrompt cart={cart} setCart={setCart} />
+                            </div>)}
+                            
                         </div>
                     </ul>
                 </div>

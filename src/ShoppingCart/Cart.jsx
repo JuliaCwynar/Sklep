@@ -1,6 +1,8 @@
 import { Button } from 'antd';
 import CartItem from './CartItem'
 import ContactForm from '../Components/ContactForm'
+import './Cart.css'
+import { cart, setCart} from '../HomePage/App.jsx'
 
 
 
@@ -8,10 +10,7 @@ function Cart({cart, setCart}) {
 
     console.log(cart)
     
-    let cartItems = cart.map((item) => (
-        <CartItem />
-    ))
-
+  
     return (
         <div className='cart'>
             <div className='row'>
@@ -20,7 +19,9 @@ function Cart({cart, setCart}) {
             <div className='row'>
                 <div className='column'>
                     <h2>Szczegóły zamówienia</h2>
-                    {cartItems}
+                    <CartItem />
+                    <CartItem />
+                    <CartItem />
                 </div>
                 
                 <div className='column'>
