@@ -1,34 +1,49 @@
 .cart--prompt {
-    background-color: pink;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    border-radius: 5px;
+    background-color: white;
     position: absolute;
     width: 300px;
     right: 3vw;
 }
 
 .cart--prompt .image img {
-    width: 7vw;
+    width: 8vw;
     height: auto;
 }
+
 
 .cart--item--row {
     display: grid;
     grid-template-columns: 9vw auto;
 }
 
-.cart--item h1, .cart--item h2 {
+.cart--item h1 {
     font-size: 20px;
-    background-color: yellow;
-    text-align: left;
+    text-align: center;
+    background-color: rgba(128, 128, 128, 0.026);
+    padding: 0.5vw 0 0.5vw 0;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .cart--item h2 {
+    position: relative;
+    top: 0.5vw;
+    text-align: left;
     font-size: 15px;
+    font-weight: 200;
 }
 
 .cart--item {
-    border: 1px solid black;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.077);
     padding: 0vw;
+    
 
+}
+
+.cart--button {
+    text-align: right;
+    margin: 0.5vw;
 }
 
 .cart--size {

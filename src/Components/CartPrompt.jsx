@@ -17,8 +17,8 @@ function CartPrompt({cart, setCart}) {
                 <div className='image'><img src={product.item.image}/></div>
             </div>
                 <div className='cart--item--column'>
-                <h2>Ilość:{product.quantity}</h2>
-                <h2>Grubość:{product.thickness}</h2>
+                <h2>Ilość:<span style={{fontWeight: 700}}> {product.quantity}</span></h2>
+                <h2>Grubość:<span style={{fontWeight: 700}}> {product.thickness}</span></h2>
             </div>
             </div>
         </div>
@@ -30,7 +30,7 @@ function CartPrompt({cart, setCart}) {
                 {items}
             </div>
             <div className='cart--button'>
-                <li><a href="bag.html"><Button>Przejdź do koszyka</Button></a></li>
+                <a href="bag.html"><Button>Przejdź do koszyka</Button></a>
             </div>
         </div>
     )

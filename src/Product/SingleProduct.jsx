@@ -46,33 +46,33 @@ function SingleProduct({cart, setCart}) {
                     <p>Grubość
                     <Select
                         size='medium'
-                        defaultValue="lucy"
+                        defaultValue={10}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 10, label: '10' },
+                            { value: 20, label: '20' },
+                            { value: 30, label: '30' },
                                 ]}
                         onChange={value => setThickness(value)}
                     /></p>
                     <p>Frezowany
                     <Select
                         size='medium'
-                        defaultValue="lucy"
+                        defaultValue="Nie"
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
-                            { value: 'tak', label: 'tak' },
-                            { value: 'nie', label: 'nie' },
+                            { value: 'tak', label: 'Tak' },
+                            { value: 'nie', label: 'Nie' },
                                 ]}
 
                     /></p>
-                <h4>Ilość m^3 w opakowaniu: </h4>
+                <h4>Ilość m<span style={{fontSize: 13, position: 'relative', bottom: 6}}>3</span> w opakowaniu: </h4>
                 <div className='product--calculated'>
                     <InputNumber 
                         size='large'
                         min={1} 
-                        max={10} 
-                        defaultValue={3}
+                        max={100} 
+                        defaultValue={1}
                         style ={{float: 'left'}}
                         onChange={value => setQuantity(value)}
                     />
