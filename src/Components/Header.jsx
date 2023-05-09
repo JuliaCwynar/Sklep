@@ -8,7 +8,9 @@ const { Search } = Input;
 
 function Header({cart, setCart}) {
 
-    const [showCart, setShowCart] = useState(false);
+    const location = useLocation();
+
+    const [showCart, setShowCart] = useState();
     const [show, setShow] = useState(true);
 
     const handleChange = () => {
@@ -32,10 +34,6 @@ function Header({cart, setCart}) {
       }
     }, []);
 
-    useEffect(() => {
-        setShowCart(false); 
-        }, [location, setShowCart]);
-    
 
     return (
         <div className='header'>
@@ -45,7 +43,7 @@ function Header({cart, setCart}) {
                 </div>
             <div className='navbar' style={{top: show ? '45px' : '0px' , transition: '0.1s ease-out', height: show ? '100px' : '70px'}}>
                 <div className='#'>
-                <Link to="/"><img src='src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></Link>
+                <Link to="/"><img src='../../src/assets/logo.png' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></Link>
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
