@@ -1,24 +1,21 @@
 import React from "react";
-import GoogleMapReact from 'google-map-react';
+import Map, {NavigationControl, Marker} from 'react-map-gl';
+import maplibregl from 'maplibre-gl';
 
-export default function Map() {
+export default function MapCom() {
 
-  const defaultProps = {
-    center: {
-      lat: 10.99835602,
-      lng: 77.01502627
-    },
-    zoom: 11
-  };
 
   return (
-    <div style={{ height: '100vh', width: '100%' }}>
-      <GoogleMapReact
-        bootstrapURLKeys={{ key: "" }}
-        defaultCenter={defaultProps.center}
-        defaultZoom={defaultProps.zoom}
-      >
-      </GoogleMapReact>
+    <div style={{ height: '50vh', width: '90%', margin: 'auto' }}>
+      <Map mapLib={maplibregl} 
+        initialViewState={{
+          longitude: 19.1343786,
+          latitude: 51.9189046,
+          zoom: 5.5
+        }}
+        style={{color: 'white'}}
+        mapStyle="https://api.maptiler.com/maps/dataviz/style.json?key=sfvxcnZPHEy0e4SLy1EO">      
+      </Map>
     </div>
   );
 }

@@ -25,7 +25,8 @@ function App() {
    <div className='homepage'>
       <Header cart={cart} setCart={setCart}/>
       <Routes>
-          <Route path='/' element={(<div className='main'>
+          <Route path='/' element={
+            (<div className='main'>
                       <Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
                       <Products checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
                   </div>)}/>

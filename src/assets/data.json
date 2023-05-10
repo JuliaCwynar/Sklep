@@ -2,82 +2,133 @@
     {
     "id": 1,
     "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "image": "./images/EPS70-038paczka600x382.png",
     "producent": "Swisspor",
     "lambda": "0.031 W/mK",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,031\r\nTR 100.",
+    "CS": "EPS 150",
+    "type": "podłogowy",
+    "color": "white",
+    "description": "λ = 0,031\r\nTR 150.",
     "min_price": 52.21
 },
 {
     "id": 2,
-    "name": "Swisspor LAMBDA WHITE fasada grafit",
-    "producent": "Swisspor",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "name": "Besser LAMBDA grafit na fundamenty",
+    "image": "./images/swisspor-600x382-paczka-TLO-UNI-fasada.png",
+    "producent": "Besser",
+    "lambda": "0.038 W/mK",
+    "CS": "EPS 80",
+    "type": "na fundamenty",
+    "color": "grafit",
+    "description": "λ = 0,038\r\nTR 80.",
+    "min_price": 60.85
 },
 {
     "id": 3,
-    "name": "Swisspor LAMBDA WHITE fasada grafit",
+    "name": "Swisspor LAMBDA WHITE podłogowy white",
+    "image": "./images/swisspor-600x382-paczka-TLO-PLUS-fasada.png",
     "producent": "Swisspor",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "lambda": "0.033 W/mK",
+    "CS": "EPS 100",
+    "type": "podłogowy",
+    "color": "white",
+    "description": "λ = 0,033\r\nTR 100.",
+    "min_price": 44.77
 },
 {
     "id": 4,
-    "name": "Swisspor LAMBDA WHITE fasada grafit",
-    "producent": "Swisspor",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "name": "Besser LAMBDA grafit elewacyjny",
+    "image": "./images/swisspor-600x382-paczka-TLO-PLUS-dach-podloga.png",
+    "producent": "Besser",
+    "lambda": "0.038 W/mK",
+    "CS": "EPS 60",
+    "type": "elewacyjny",
+    "color": "grafit",
+    "description": "λ = 0,038\r\nTR 60.",
+    "min_price": 57.93
 },
 {
     "id": 5,
-    "name": "Besser EPS 70-038 fasada, podłoga, biały λ 0,038",
-    "producent": "Besser",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "name": "Swisspor LAMBDA grafit na fundamenty",
+    "image": "./images/swisspor-600x382-paczka-TLO-MAX-fasada.png",
+    "producent": "Swisspor",
+    "lambda": "0.040 W/mK",
+    "CS": "EPS 80",
+    "type": "na fundamenty",
+    "color": "grafit",
+    "description": "λ = 0,040\r\nTR 80.",
+    "min_price": 58.94
 },
 {
     "id": 6,
-    "name": "Besser EPS 70-038 fasada, podłoga, biały λ 0,038",
+    "name": "Besser LAMBDA WHITE podłogowy grafit",
+    "image": "./images/swisspor-600x382-paczka-TLO-LAMBDA-PLUS-fasada.png",
     "producent": "Besser",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "lambda": "0.043 W/mK",
+    "CS": "EPS 150",
+    "type": "podłogowy",
+    "color": "grafit",
+    "description": "λ = 0,043\r\nTR 150.",
+    "min_price": 73.99
 },
 {
-    "id": 7,
-    "name": "Besser EPS 70-038 fasada, podłoga, biały λ 0,038",
+    "id": 2,
+    "name": "Swisspor LAMBDA GRAFIT na fundamenty",
+    "image": "./images/swisspor-600x382-paczka-TLO-LAMBDA-MAX-fasada.png",
+    "producent": "Swisspor",
+    "lambda": "0.035 W/mK",
+    "CS": "EPS 100",
+    "type": "na fundamenty",
+    "color": "grafit",
+    "description": "λ = 0.035\r\nCS 100.",
+    "min_price": 73.12
+},
+{
+    "id": 3,
+    "name": "Besser LAMBDA GRAFIT podłogowy",
+    "image": "./images/swisspor-600x382-paczka-TLO-FONO-podloga.png",
     "producent": "Besser",
-    "image": "./images/EPS70-038paczka600x382.png",
-    "description": "λ = 0,038\r\nTR 100.\r\nCS(10) 70",
-    "min_price": 43.12,
-    "min_max_cubic_meters": [
-        0.21,
-        0.3
-    ]
+    "lambda": "0.031 W/mK",
+    "CS": "EPS 70",
+    "type": "podłogowy",
+    "color": "grafit",
+    "description": "λ = 0.031\r\nCS 70.",
+    "min_price": 52.77
+},
+{
+    "id": 4,
+    "name": "Swisspor LAMBDA WHITE elewacyjny",
+    "image": "./images/swisspor-600x382-paczka-TLO-EPS-100-dach-podloga.png",
+    "producent": "Swisspor",
+    "lambda": "0.036 W/mK",
+    "CS": "EPS 60",
+    "type": "elewacyjny",
+    "color": "white",
+    "description": "λ = 0.036\r\nCS 60.",
+    "min_price": 58.21
+},
+{
+    "id": 5,
+    "name": "Besser LAMBDA WHITE podłogowy",
+    "image": "./images/LWpaczka600x382.png",
+    "producent": "Besser",
+    "lambda": "0.034 W/mK",
+    "CS": "EPS 120",
+    "type": "podłogowy",
+    "color": "white",
+    "description": "λ = 0.034\r\nCS 120.",
+    "min_price": 81.89
+},
+{
+    "id": 6,
+    "name": "Swisspor LAMBDA GRAFIT na fundamenty",
+    "image": "./images/LMWpaczka600x382.png",
+    "producent": "Swisspor",
+    "lambda": "0.038 W/mK",
+    "CS": "EPS 80",
+    "type": "na fundamenty",
+    "color": "grafit",
+    "description": "λ = 0.038\r\nCS 80.",
+    "min_price": 62.55
 }
-    ]
+]

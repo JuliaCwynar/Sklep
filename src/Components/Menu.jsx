@@ -16,8 +16,9 @@ let Lambda = [
   '0.040 W/mK',
 ];
 let Efficiency = ['EPS 50', 'EPS 60', 'EPS 70', 'EPS 80', 'EPS 100', 'EPS 120', 'EPS 150', 'EPS 200'];
-
-let Categories = ['producent','lambda', 'efficiency'];
+let Color = ['white', 'grafit'];
+let Type = ['podłogowy', "na fundamenty", "elewacyjny"];
+let Categories = ['producent','lambda', 'efficiency', 'color', 'type'];
 
 const choice = (element, handleChange) =>
   element.map((item) => (

@@ -31,14 +31,10 @@ function SingleProduct({cart, setCart}) {
                 <div className='product--description'>
                     <img src={data.image}/>
                     <div className='description--table'>
-                        <p><b>Lambda</b></p> 
-                        <p>{data.lambda}</p>
-                        <p><b>Producent</b></p>
-                        <p>{data.producent}</p>
-                        <p><b>Kolor</b></p>
-                        <p>{data.color}</p>
-                        <p><b>Typ</b></p> 
-                        <p>{data.type}</p>
+                        <p><b>Lambda</b>{data.lambda}</p>
+                        <p><b>Producent</b>{data.producent}</p>
+                        <p><b>Kolor</b>{data.color}</p>
+                        <p><b>Typ</b>{data.type}</p> 
                     </div>
                 </div>
                 <div className='product--pricing'>

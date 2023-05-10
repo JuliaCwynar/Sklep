@@ -1,15 +1,47 @@
 .contact {
-
-    background-color: pink;
-    width: 70vw;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
+    border-radius: 15px;
     justify-content: center;
-    margin: auto;
     gap: 1vw;
+    margin: 150px auto 150px auto;
+    text-align: left;
+    display: flex;
+    grid-template-columns:  auto auto;
+    padding: 2vw;
+    padding-bottom: 1vw;
+    width: 70vw;
     
 
+}
+
+.contact h2 {
+    text-align: center;
+}
+
+.contact--data {
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.089);
+    border-radius: 10px;
+    padding: 1vw 2vw 5vw 2vw;
+    background-color:rgba(0, 0, 0, 0.014);
+    margin-bottom: 2vw;
 }
 
 .contact--column {
     padding: 1vw;
     width: 50%;
+}
+
+@media only screen and (max-width: 580px) {
+
+    .contact {
+        display: grid;
+        grid-template-columns:  auto;
+        padding-bottom: 10vw;
+    }
+    .contact--column {
+        width: 100%;
+        padding: 1vw;
+    }
 }

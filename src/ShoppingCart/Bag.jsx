@@ -8,7 +8,7 @@ import '../ShoppingCart/Cart.css'
 import { cart, setCart} from '../HomePage/App.jsx'
 
 function Bag() {
-
+      console.log(cart)
   return (
       <Cart cart={cart} setCart={setCart}/>
   )

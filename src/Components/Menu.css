@@ -70,14 +70,14 @@
 
   .filter--menu {
     top: 120px;
-    width: 25vw;
+    width: 100%;
 }
 }
 
 @media only screen and (max-width: 780px) {
   .filter--menu {
     top: 120px;
-    width: 35vw;
+    width: 100%;
 }
 }
 
@@ -85,10 +85,11 @@
 
   .filter--menu {
     top: 120px;
+    padding: 0vw;
     margin: auto;
     padding-top: 1vw;
     padding-bottom: 1vw;
-    width: 100vw;
+    width: 100%;
     height: auto;
 }
 

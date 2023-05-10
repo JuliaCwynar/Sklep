@@ -8,9 +8,7 @@ import React, { useState } from 'react'
 function ContactPage() {
 
   return (
-    <div className='main'>
       <Contact />
-    </div>
   )
 }
 

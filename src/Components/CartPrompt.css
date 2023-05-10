@@ -23,7 +23,9 @@
     text-align: center;
     background-color: rgba(128, 128, 128, 0.026);
     padding: 0.5vw 0 0.5vw 0;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    box-shadow: rgba(148, 148, 148, 0.096) 0px 1px 4px;
+    background-color: rgba(119, 119, 119, 0.13);
+    margin: 0px;
 }
 
 .cart--item h2 {
@@ -37,18 +39,18 @@
 .cart--item {
     border-bottom: 1px solid rgba(0, 0, 0, 0.077);
     padding: 0vw;
-    
-
 }
 
+
 .cart--button {
-    text-align: right;
-    margin: 0.5vw;
+    text-align: center;
+    margin: auto;
+    padding: 1vw;
 }
 
 .cart--size {
-    left: 2.5vw;
-    bottom: 2.1vw;
+    left: 60%;
+    bottom: 70%;
     position: absolute;
     border-radius: 50%;
     width: 20px;

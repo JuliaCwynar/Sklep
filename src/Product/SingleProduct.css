@@ -80,12 +80,69 @@
   }
 
   .description--table {
-    display: grid;
-    grid-template-columns: 6vw 19vw;
+    width: 100%;
+  }
+
+  .description--table b {
+    margin-right: 1vw;
   }
 
   .product--description p{
     margin: 0px;
     font-size: 20px;
     border-bottom: 1px solid rgba(128, 128, 128, 0.204);
+  }
+
+  @media only screen and (max-width: 580px) {
+
+    .product {
+      padding: 3vw;
+      margin: auto;
+      width: 90%;
+      margin-top: 200px;
+    }
+
+    .product--row {
+      margin: auto;
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto;
+    }
+
+    .description--table {
+      width: 100%;
+    }
+  
+    .description--table b {
+      margin-right: 1vw;
+      width: 40vw;
+    }
+
+    .product--pricing {
+      width: 90%;
+      margin: auto;
+      margin-top: 10vw;
+    }
+
+    .product--description {
+      display: grid;
+      gap: 5vw;
+      grid-template-columns: 50% auto;
+
+    }
+    .product--description img{
+      padding-left: 2vw;
+      margin: auto;
+      height: 90%;
+      width: 100%;
+      object-fit: cover;
+
+      
+  }
+
+  .product--calculations {
+    width: auto;
+    margin: auto;
+  }
+  
   }
