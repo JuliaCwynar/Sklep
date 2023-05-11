@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import {DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
 import { Checkbox } from 'antd';
+import { filter } from '@chakra-ui/react';
 
 let Companies = ['Besser', 'Swisspor'];
 let Lambda = [
@@ -41,34 +42,37 @@ function Menu({checkedItems, setCheckedItems}) {
     setShowItems({ ...showItems, [name]: !showItems[name] });
   };
 
-  const handleChange = (event, category) => {
+  const handleChange = (event) => {
     const producent = event.target.value;
-    let newFilters;
-  
     if (event.target.checked) {
-      newFilters = [...filters, producent];
+      setFilters([...filters, producent]);
     } else  {
-      newFilters = filters.filter((filter) => filter !== producent);
+      setFilters(filters.filter((filter) => filter !== producent));
     }
-    const filteredArray = newFilters.length == 1 ? checkedItems[0].filter(item => item.producent.includes(newFilters[0] || newFilters[1])) : unfilteredList[0];
-    console.log(filteredArray)
-    setCheckedItems([filteredArray]);
-    setFilters(newFilters);
+    console.log(filters);
+    console.log(checkedItems);
+    useEffect(() => {
+      setCheckedItems(checkedItems.filter((item) => filters.includes(item.producent)));
+    }, [filters]);
+    
+
   }
+  
+  
 
   const changeProducent = (event) => {
     const producent = event.target.value;
     let newFilters;
-  
+
     if (event.target.checked) {
       newFilters = [...filters, producent];
     } else  {
       newFilters = filters.filter((filter) => filter !== producent);
     }
+    console.log(checkedItems);
     const filteredArray = newFilters.length == 1 ? checkedItems[0].filter(item => item.producent.includes(newFilters[0] || newFilters[1])) : unfilteredList[0];
     console.log(filteredArray)
     setCheckedItems([filteredArray]);
-    setFilters(newFilters);
   }
 
 

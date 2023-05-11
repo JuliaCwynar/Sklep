@@ -8,21 +8,21 @@ return (
     <div className='cart--item'>
          <p className='item--title'>Swisspor LAMBDA mega WHITE ®fasada grafit λ 0,031</p>
         <div className='cart--item--row'>
-            <img src='src/assets/images/EPS70-038paczka600x382.png'></img>
+            <img src='../../public/images/EPS70-038paczka600x382.png'></img>
             <div className='cart--description'>
                 <p>Ilość
                     <InputNumber 
                         size='small'
                         min={1} 
                         max={10} 
-                        defaultValue={item.name}
+                        defaultValue={5}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                     />
                 </p>
                 <p>Grubość
                 <Select
                         size='small'
-                        defaultValue={item.thickness}
+                        defaultValue={10}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
                             { value: 'jack', label: 'Jack' },
@@ -33,7 +33,7 @@ return (
                 <p>Frez
                 <Select
                         size='small'
-                        defaultValue="lucy"
+                        defaultValue="Tak"
                         style={{ position: 'relative', top: '-5px', width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
                             { value: 'jack', label: 'Jack' },

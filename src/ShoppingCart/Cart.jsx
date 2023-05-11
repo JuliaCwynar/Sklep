@@ -2,7 +2,6 @@ import { Button } from 'antd';
 import CartItem from './CartItem'
 import ContactForm from '../Components/ContactForm'
 import './Cart.css'
-import { cart, setCart} from '../HomePage/App.jsx'
 
 
 
@@ -19,7 +18,6 @@ function Cart({cart, setCart}) {
             <div className='row'>
                 <div className='column'>
                     <h2>Szczegóły zamówienia</h2>
-                    <CartItem />
                     <CartItem />
                     <CartItem />
                 </div>
