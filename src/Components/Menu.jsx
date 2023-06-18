@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import {DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
+import {CalculatorOutlined, DownOutlined, RightOutlined, FilterOutlined, SearchOutlined} from '@ant-design/icons'
 import { Checkbox } from 'antd';
 import { filter } from '@chakra-ui/react';
 
@@ -33,7 +33,7 @@ const choice = (element, handleChange) =>
 
 function Menu({checkedItems, setCheckedItems}) {
   const [showItems, setShowItems] = useState({});
-  const [showFilter, setShowFilter] = useState(true);
+  const [showFilter, setShowFilter] = useState(window.innerWidth > 600);
 
   const [filters, setFilters] = useState([]);
   const [unfilteredList, setUnfilteredList] = useState([checkedItems[0]]);
@@ -108,7 +108,8 @@ function Menu({checkedItems, setCheckedItems}) {
         {dropdown('Styropian elewacyjny', 2)}
         {dropdown('Styropian na fundamenty', 3)}
       </div>
-
+      {(window.location.pathname === '/') &&
+        <div>
       <div className='filter'>
         <h2>Producent</h2>
         <div className='filter--choices'>{choice(Companies, changeProducent)}</div>
@@ -123,6 +124,16 @@ function Menu({checkedItems, setCheckedItems}) {
         <h2>Wytrzymałość na ściskanie CS (10) [kPa]</h2>
         <div className='filter--choices'>{choice(Efficiency, handleChange)}</div>
       </div>
+      </div>}
+      {(window.location.pathname !== '/') &&
+        <div className='menu--contact'>
+          <h2>Dostawa</h2>
+          <p>Ceny są aktualne. Zapytania można wysyłać pod adres:
+          <br/><b>krzysztof.cwynar@biuro-hossa.eu</b>
+          <br/>Napiszcie co potrzebujecie, w jakich ilościach (łącznie minimum ok. 100 paczek), koniecznie należy podać numer telefonu. Nie ważne skąd piszesz, styropian dostarczymy gratis już od 2005 roku z 28 magazynów rozlokowanych w całej Polsce. Dostawa jest gratis. Zapraszamy do współpracy.</p>
+        </div>
+        
+      }
     </div>)}
     </div>
   );

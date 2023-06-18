@@ -10,7 +10,7 @@ import Footer from '../Footer/Footer'
 import '../Footer/Footer.css'
 import data from '../assets/data.json'
 import SingleProduct from '../Product/SingleProduct.jsx'
-import Bag from '../ShoppingCart/Bag.jsx'
+import Cart from '../ShoppingCart/Cart.jsx'
 import { Route,  Routes } from 'react-router-dom'
 import ContactPage from '../Contact/ContactPage.jsx'
 
@@ -18,6 +18,7 @@ function App() {
 
   const [checkedItems, setCheckedItems] = useState([data]);
   const [cart, setCart] = useState([]);
+  const [item, setItem] = useState(null);
 
 
 
@@ -28,13 +29,13 @@ function App() {
           <Route path='/' element={
             (<div className='main'>
                       <Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
-                      <Products checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
+                      <Products checkedItems={checkedItems} setCheckedItems={setCheckedItems} item={item} setItem={setItem}/>
                   </div>)}/>
           <Route path='/contact' element={<ContactPage />}/>
-          <Route path='/bag' element={<Bag/>}/>
-          <Route path='/item' element={(<div className='main'>
-                      <Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>
-                      <SingleProduct cart={cart} setCart={setCart}/>
+          <Route path='/bag' element={<Cart cart={cart} setCart={setCart}/>}/>
+          <Route path='/item${item.id}' element={(<div className='main'>
+                      {(window.innerWidth > 600) &&<Menu checkedItems={checkedItems} setCheckedItems={setCheckedItems}/>}
+                      <SingleProduct cart={cart} setCart={setCart} item={item} setItem={setItem}/>
                   </div>)}/>
       </Routes>
       <Footer />
@@ -49,3 +50,6 @@ export let setCart = () => {};
 
 export let checkedItems = [];
 export let setCheckedItems = () => {};
+
+export let item = [];
+export let setItem = () => {};

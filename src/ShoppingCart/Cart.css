@@ -98,23 +98,30 @@
 
 @media only screen and (max-width: 880px) {
     .cart .row{
+        background-color: white;
         display: grid;
         grid-template-columns: auto;
         width: 100%;
         margin: 0px;
+        border-radius: 0px;
+
     }
 
     .cart .column {
         width: 100%;
         margin: 0px;
         justify-content: center;
+        padding: 0px;
+        border-radius: 0px;
         }
 
     .cart {
+        background-color: white;
+        display: block;
+        width: 100%;
         padding: 0px;
         margin: auto;
         margin-top: 150px;
-        width: 90%;
     }
     
     p {

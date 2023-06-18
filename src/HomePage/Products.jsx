@@ -1,9 +1,9 @@
 import React from 'react'
 import { Pagination } from 'antd';
-import { checkedItems, setCheckedItems} from '../HomePage/App.jsx'
 import { Link } from 'react-router-dom'
 
-function Products({checkedItems, setCheckedItems}) {   
+function Products({checkedItems, setCheckedItems, item, setItem}) {   
+
 
     let items = checkedItems[0].map((item) => (
         <div className='item' key={item.id}>
@@ -11,10 +11,11 @@ function Products({checkedItems, setCheckedItems}) {
             <h1>{item.name}</h1>
             <h2>{item.description}</h2>
             <h3>{item.min_price}zł</h3>
-            <Link to='/item'><button>Zobacz więcej</button></Link>
+            <Link to='item${item.id}'><button onClick={() => setItem(item.id)}>Zobacz więcej</button></Link>
         </div>
-    ))
-
+    ) )
+    
+    console.log(item)
 
     return (
         <div className='shop'>

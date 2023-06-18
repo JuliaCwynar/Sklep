@@ -66,6 +66,29 @@
   display: none;
 }
 
+.calculator {
+  margin: 20px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+}
+
+.menu--contact {
+  margin: 20px;
+  padding: 10px;
+  border-radius: 3px;
+  background-color: white;
+  color: black;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
+
+}
+
+.menu--contact p {
+  text-align: justify;
+  font-size: 0.8vw;
+}
+
 @media only screen and (max-width: 1000px) {
 
   .filter--menu {
@@ -87,8 +110,8 @@
     top: 120px;
     padding: 0vw;
     margin: auto;
-    padding-top: 1vw;
-    padding-bottom: 1vw;
+    padding-top: 2vw;
+    padding-bottom: 3vw;
     width: 100%;
     height: auto;
 }

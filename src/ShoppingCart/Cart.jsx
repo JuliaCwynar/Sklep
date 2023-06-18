@@ -7,7 +7,13 @@ import './Cart.css'
 
 function Cart({cart, setCart}) {
 
+    console.log('aaa')
     console.log(cart)
+    console.log('aaa')
+
+    let items = cart.map((item) => (
+        <CartItem item={item}/>
+    ) )
     
   
     return (
@@ -18,8 +24,7 @@ function Cart({cart, setCart}) {
             <div className='row'>
                 <div className='column'>
                     <h2>Szczegóły zamówienia</h2>
-                    <CartItem />
-                    <CartItem />
+                    {items}
                 </div>
                 
                 <div className='column'>

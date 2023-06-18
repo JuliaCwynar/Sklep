@@ -1,39 +1,47 @@
-import React, { useState, useEffect } from 'react'
-import { Input} from 'antd';
-import { Phone, ShoppingCart, Truck, } from 'react-feather';
-import CartPrompt from './CartPrompt.jsx'
-import { Link, useLocation } from 'react-router-dom'
-import { logo } from '../assets/logo.json'
+import React, { useState, useEffect } from 'react';
+import { Input } from 'antd';
+import { Phone, ShoppingCart, Truck } from 'react-feather';
+import CartPrompt from './CartPrompt.jsx';
+import { Link, useLocation } from 'react-router-dom';
+import { logo } from '../assets/logo.json';
 
 const { Search } = Input;
 
-function Header({cart, setCart}) {
+function Header({ cart, setCart }) {
+  const location = useLocation();
+  const [showCart, setShowCart] = useState(false);
+  const [show, setShow] = useState(true);
 
-    const location = useLocation();
+  const handleChange = () => {
+    setShowCart(!showCart);
+  };
 
-    const [showCart, setShowCart] = useState();
-    const [show, setShow] = useState(true);
-
-    const handleChange = () => {
-        setShowCart(!showCart)
-        console.log(cart.length)
-    }
-
-
-    useEffect(() => {
-      if (typeof window !== "undefined") {
-        const handleScroll = () => setShow(window.pageYOffset < 10);
-        const handleResize = () => setShow(window.innerWidth > 440);
-    
-        window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize);
-    
-        return () => {
-          window.removeEventListener("scroll", handleScroll);
-          window.removeEventListener("resize", handleResize);
-        };
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      const cartPrompt = document.getElementById('cart-prompt');
+      if (cartPrompt && !cartPrompt.contains(event.target)) {
+        setShowCart(false);
       }
-    }, []);
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => setShow(window.pageYOffset < 10);
+    const handleResize = () => setShow(window.innerWidth > 440);
+
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
 
     return (
@@ -59,7 +67,7 @@ function Header({cart, setCart}) {
                                     {cart.length}
                                 </div>
                             )
-                            }<Link to="#"><ShoppingCart size={30} color='#000d2a' onClick={handleChange}/>KOSZYK</Link></li>
+                            }<Link to="#" onClick={handleChange}><ShoppingCart size={30} color='#000d2a' />KOSZYK</Link></li>
                             {showCart && (
                                 <div id="cart-prompt">
                                 <CartPrompt cart={cart} setCart={setCart} />

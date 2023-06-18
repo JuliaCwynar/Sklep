@@ -9,6 +9,7 @@
     background-color: white;
     border-radius: 5px;
     margin-top: 200px;
+    margin-bottom: 5vw;
 
 }
 
@@ -96,10 +97,11 @@
   @media only screen and (max-width: 580px) {
 
     .product {
-      padding: 3vw;
+      padding: 0vw;
       margin: auto;
-      width: 90%;
-      margin-top: 200px;
+      width: 100%;
+      margin-top: 150px;
+      margin-bottom: 15vw;
     }
 
     .product--row {
@@ -109,11 +111,17 @@
       grid-template-columns: auto;
     }
 
+    .product--row h1 {
+      font-size: 8vw;
+      padding-top: 5vw;
+    }
+
     .description--table {
       width: 100%;
     }
   
     .description--table b {
+      font-size: 4.5vw;
       margin-right: 1vw;
       width: 40vw;
     }
@@ -122,6 +130,7 @@
       width: 90%;
       margin: auto;
       margin-top: 10vw;
+      margin-bottom: 10vw;
     }
 
     .product--description {

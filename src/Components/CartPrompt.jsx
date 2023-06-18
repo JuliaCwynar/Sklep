@@ -1,14 +1,13 @@
-import './CartPrompt.css'
-import { Button } from 'antd'
-import { Link } from 'react-router-dom'
+import './CartPrompt.css';
+import { Button } from 'antd';
+import { Link, useLocation } from 'react-router-dom';
+import { useState, useRef, useEffect } from 'react';
 
+function CartPrompt({ cart, setCart }) {
 
-function CartPrompt({cart, setCart}) {
-
-    console.log(cart)
 
     let items = cart.map((product) => (
-        <div className='cart--item' key={product.item.id}>
+        <div className='cart--prompt--item' key={product.item.id}>
             <div>
                 <h1>{product.item.name}</h1>
             </div>
@@ -27,7 +26,7 @@ function CartPrompt({cart, setCart}) {
     
     return (
         <div className='cart--prompt'>
-            <div className='cart--element'>
+            <div className='cart--element' >
                 {items}
             </div>
             <div className='cart--button'>

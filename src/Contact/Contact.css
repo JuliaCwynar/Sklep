@@ -36,12 +36,28 @@
 @media only screen and (max-width: 580px) {
 
     .contact {
-        display: grid;
+        width: auto;
+        padding: 1vw 10vw;
+        display: block;
         grid-template-columns:  auto;
         padding-bottom: 10vw;
     }
     .contact--column {
         width: 100%;
-        padding: 1vw;
+        padding: 0vw;
+        font-size: 5vw;
+    }
+
+    .contact--data {
+        margin: 0vw;
+    }
+
+    .contact p {
+        font-size: 4vw;
+    }
+
+    .contact--data p{
+        font-size: 4vw;
+        padding: 1vw 0vw 0vw 0vw;
     }
 }
