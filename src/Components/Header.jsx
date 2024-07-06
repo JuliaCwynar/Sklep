@@ -3,11 +3,17 @@ import { Input } from 'antd';
 import { Phone, ShoppingCart, Truck } from 'react-feather';
 import CartPrompt from './CartPrompt.jsx';
 import { Link, useLocation } from 'react-router-dom';
-import { logo } from '../assets/logo.json';
+import { useFilter } from '../contexts/filter-context';
 
 const { Search } = Input;
 
-function Header({ cart, setCart }) {
+function Header() {
+  const { filter, setFilter } = useFilter();
+  const onSearch = (value, _e, info) => {
+    setFilter({'search': [value]});
+    console.log(filter)
+  };
+  const cart = [];
   const location = useLocation();
   const [showCart, setShowCart] = useState(false);
   const [show, setShow] = useState(true);
@@ -52,11 +58,11 @@ function Header({ cart, setCart }) {
                 </div>
             <div className='navbar' style={{top: show ? '45px' : '0px' , transition: '0.1s ease-out', height: show ? '100px' : '70px'}}>
                 <div className='#'>
-                <Link to="/"><img src={logo} style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></Link>
+                <Link to="/"><img src='http://localhost:8000/static/logo.jpg' style={{height: show ? '85px' : '50px', transition: '0.1s ease-out'}}/></Link>
                 </div>
                 <div className='navbar--right'>
                     <div className='search--bar'>
-                        <Search status="warning" style={{width: 500}}/>
+                        <Search status="warning" onSearch={onSearch} style={{width: 500}}/>
                     </div>
                     <ul>
                         <li><Link to="#"><Truck size={30} color='#000d2a'/>DOSTAWA</Link></li>
@@ -70,7 +76,7 @@ function Header({ cart, setCart }) {
                             }<Link to="#" onClick={handleChange}><ShoppingCart size={30} color='#000d2a' />KOSZYK</Link></li>
                             {showCart && (
                                 <div id="cart-prompt">
-                                <CartPrompt cart={cart} setCart={setCart} />
+                                <CartPrompt />
                             </div>)}
                             
                         </div>

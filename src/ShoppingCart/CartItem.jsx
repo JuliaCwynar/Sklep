@@ -1,53 +1,90 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
 import TableData from '../Components/Table'
-import { DeleteOutlined } from '@ant-design/icons'
-import { Select, InputNumber } from 'antd';
+import { Select, InputNumber, Button } from 'antd';
+import { DeleteOutlined } from '@ant-design/icons';
 
-function CartItem(item) {
+function CartItem({ item, setCart }) {
+    function removeItemFromCart(item) {
+        setCart((prevCart) => {
+        const updatedCart = [...prevCart];
+        const itemIndex = updatedCart.findIndex((cartItem) => cartItem === item);
+        console.log(itemIndex)
+    if (itemIndex !== -1) {
+        updatedCart.splice(itemIndex, 1);
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        return updatedCart; 
+    }
+    return prevCart; 
+    });
+    }
+
+
+    function updateItemFromCart(item){
+
+        setCart((prevCart) => {
+        const updatedCart = [...prevCart];
+        const itemIndex = updatedCart.findIndex((cartItem) => cartItem === item);
+    if (itemIndex !== -1) {
+        updatedCart[itemIndex] = item
+        localStorage.setItem('cart', JSON.stringify(updatedCart));
+        return updatedCart; 
+    }
+    return prevCart; 
+    });
+
+    }
+    function updateQuantity(item, quantity){
+        item.quantity = quantity
+        updateItemFromCart(item)
+    }
+    function updateFrez(item, frez){
+        item.frez = frez
+        updateItemFromCart(item)
+    }
+    function updateThickness(item, thickness){
+        item.thickness = thickness
+        updateItemFromCart(item)
+    }
 return (
     <div className='cart--item'>
-         <p className='item--title'>Swisspor LAMBDA mega WHITE ®fasada grafit λ 0,031</p>
+         <p className='item--title'>{item.name}</p>
         <div className='cart--item--row'>
-            <img src='../../public/images/EPS70-038paczka600x382.png'></img>
+            <a href="link address"><img src={`http://localhost:8000${item.image}` }/></a>
             <div className='cart--description'>
                 <p>Ilość
                     <InputNumber 
                         size='small'
-                        min={1} 
-                        max={10} 
-                        defaultValue={5}
+                        defaultValue={item.quantity}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
+                        onChange={(value) => updateQuantity(item, value)}
                     />
                 </p>
                 <p>Grubość
-                <Select
+                 <Select 
                         size='small'
-                        defaultValue={10}
+                        defaultValue={item.thickness}
                         style={{ position: 'relative', top: '-5px',width: '10vw', marginRight: '1vw', float: 'right' }}
-                        options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
-                                ]}
+                        options={item.available_thickness.map(thickness => ({ value: thickness, label: thickness }))}
+                        onChange={(value) => updateThickness(item, value)}
                     /></p>
                 <p>Frez
                 <Select
                         size='small'
-                        defaultValue="Tak"
+                        defaultValue={item.frez}
                         style={{ position: 'relative', top: '-5px', width: '10vw', marginRight: '1vw', float: 'right' }}
                         options={[
-                            { value: 'jack', label: 'Jack' },
-                            { value: 'lucy', label: 'Lucy' },
-                            { value: 'Yiminghe', label: 'yiminghe' },
+                            { value: 'Tak', label: 'Tak' },
+                            { value: 'Nie', label: 'Nie' },
                                 ]}
+                        onChange={(value) => updateFrez(item, value)}
                     /></p>
             </div>
         </div>
-        <TableData />
+        <TableData item={item}/>
         <div className='item--info2'>
-            <h3>Suma brutto: </h3>  
+            <h3>Suma brutto: {parseFloat((parseFloat(item.price) * parseInt(item.quantity) * 1.23 *100)/100).toFixed(2)} zł</h3>  
         </div>
-        <DeleteOutlined style={{position: 'relative', bottom: '35px',right: '15px', float: 'right', fontSize: '20px'}}/>
+        <Button style={{position: 'relative', bottom: '35px',right: '15px', float: 'right', fontSize: '20px'}} onClick={() => removeItemFromCart(item)}><DeleteOutlined style={{ justifyContent: 'center', margin: 'auto', display: 'flex' }} /></Button>
     </div>
     
 )

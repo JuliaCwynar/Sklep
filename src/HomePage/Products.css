@@ -1,6 +1,8 @@
 .products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    /* display: grid; */
+    /* grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); */
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .item img {
@@ -11,17 +13,25 @@
     border-radius: 5px;
     
 }
+.pagination-container {
+    width: auto; /* Inherit the width of the .products container */
+    display: flex;
+    justify-content: center;
+}
 
 .image {
+    height: 185px;
     width: 300px;
 }
 
 .item h1 {
     font-size: 20px;
+    height: 50px;
 }
 
 .item h2 {
     font-size: 15px;
+    height: 50px;
 }
 
 .item {
@@ -42,6 +52,7 @@
 
 .shop{
     margin-top: 200px;
+    width: 115%;
 }
 
 .shop h2:first-child{

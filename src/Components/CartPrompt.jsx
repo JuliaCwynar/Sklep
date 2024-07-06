@@ -1,24 +1,23 @@
 import './CartPrompt.css';
 import { Button } from 'antd';
-import { Link, useLocation } from 'react-router-dom';
-import { useState, useRef, useEffect } from 'react';
+import { Link,} from 'react-router-dom';
 
-function CartPrompt({ cart, setCart }) {
+function CartPrompt() {
+     const storedCart = JSON.parse(localStorage.getItem('cart')) || [];
 
-
-    let items = cart.map((product) => (
-        <div className='cart--prompt--item' key={product.item.id}>
+    let items = storedCart.map((product) => (
+        <div className='cart--prompt--item' key={product.id}>
             <div>
-                <h1>{product.item.name}</h1>
+                <h1>{product.name}</h1>
             </div>
             <div className='cart--item--row'>
             <div className='cart--item--column'>
-                <div className='image'><img src={product.item.image}/></div>
+                <div className='image'><img src={`http://localhost:8000${product.image}`}/></div>
             </div>
                 <div className='cart--item--column'>
                 <h2>Ilość:<span style={{fontWeight: 700}}> {product.quantity}</span></h2>
                 <h2>Grubość:<span style={{fontWeight: 700}}> {product.thickness}</span></h2>
-                <h2>Frezowany:<span style={{fontWeight: 700}}> {product.thickness}</span></h2>
+                <h2>Frezowany:<span style={{fontWeight: 700}}> {product.frez}</span></h2>
             </div>
             </div>
         </div>

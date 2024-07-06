@@ -6,7 +6,7 @@
     text-align: left;
     border-radius: 3px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
-    height: 1100px;
+    height: fit-content;
     margin-right: 2vw;
 }
 
